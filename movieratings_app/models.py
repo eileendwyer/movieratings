@@ -9,8 +9,7 @@ class Rater(models.Model):
     occupation = models.CharField(max_length=30, null=True)
     zipcode = models.CharField(max_length=10)
 
-    def __str__(self):
-        return self.rater_id
+
 
 
 class Movie(models.Model):
@@ -44,10 +43,10 @@ class Movie(models.Model):
 
 
 class Rating(models.Model):
-    rater_id = models.ForeignKey(Rater)
-    item_id = models.ForeignKey(Movie)
+    rater = models.ForeignKey(Rater)
+    item = models.ForeignKey(Movie)
     rating = models.IntegerField()
     timestamp = models.IntegerField()
 
     def __str__(self):
-        return self.item_id
+        return self.item.title
