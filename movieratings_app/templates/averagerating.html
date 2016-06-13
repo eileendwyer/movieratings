@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head> <meta charset="UTF-8">
+        <title> Tootie's Movies</title>
+</head>
+
+<body> <h2>Welcome to Tootie's Movies!</h2>
+        <h3>These are the top 20 movies in film history.</h3>
+        <p>The results are averaged based on ratings by typical moviegoers.</p>
+        <p>To learn more about a movie, click on it's link.</p>
+
+        <ol> {% for movie in averagerating %}
+            <li> <a href="/movie_id/}}">{{ movie.movie.title}}</a> </li>
+        {% endfor %}
+        </ol>
+
+</body>
+</html>
