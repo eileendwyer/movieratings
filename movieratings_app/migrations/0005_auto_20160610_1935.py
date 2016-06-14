@@ -5,6 +5,9 @@ from __future__ import unicode_literals
 from django.db import migrations
 
 
+
+
+
 class Migration(migrations.Migration):
 
     dependencies = [
@@ -12,6 +15,8 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
+
+
         migrations.RenameField(
             model_name='rating',
             old_name='item_id',

@@ -22,9 +22,7 @@ def rating_data(apps, schema_editor):
             temp_item_id = Movie.objects.get(item_id=int(row['item_id']))
 
             Rating.objects.create(id=temp_rater_id, item_id=temp_item_id,
-                    rating=int(row['rating']),timestamp=int(row['timestamp']))
-
-
+                                   rating=int(row['rating']), timestamp=int(row['timestamp']))
 
 
 class Migration(migrations.Migration):

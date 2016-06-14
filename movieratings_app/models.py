@@ -45,8 +45,10 @@ class Movie(models.Model):
 class Rating(models.Model):
     rater = models.ForeignKey(Rater)
     item = models.ForeignKey(Movie)
-    rating = models.IntegerField()
+    rating = models.ManyToManyField(Movie)
     timestamp = models.IntegerField()
 
     def __str__(self):
         return self.item.title
+
+

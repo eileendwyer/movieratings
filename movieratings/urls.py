@@ -16,6 +16,14 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+from movieratings_app import views
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+#    url(r'^$', views.test_view),
+    url(r'^$', views.home, name='home'),
+    url(r'^averagerating/$', views.averagerating, name='averagerating'),
+    url(r'^rater_info/$', views.rater_info, name='rater_info'),
+
+
 ]
